@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MenuViewController.swift
 //  rock-paper-scissors
 //
 //  Created by Felipe Valdivia on 11/9/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
