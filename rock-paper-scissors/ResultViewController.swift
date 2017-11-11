@@ -12,7 +12,13 @@ class ResultViewController: UIViewController {
     
     var computerValue:Int?
     var userValue:Int?
-
+    
+    //Mark: Outlets
+    @IBOutlet weak var computerChoice: UILabel!
+    @IBOutlet weak var userChoice: UILabel!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
