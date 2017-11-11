@@ -8,7 +8,17 @@
 
 import UIKit
 
+// MARK: Menu View Controller
+
 class MenuViewController: UIViewController {
+    
+    // MARK: Generate Computer Choice
+    // generate a random value between 1 and 3.
+    func randomChoice() -> Int {
+        let randomValue = 1 + arc4random() % 3
+        
+        return Int(randomValue)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
