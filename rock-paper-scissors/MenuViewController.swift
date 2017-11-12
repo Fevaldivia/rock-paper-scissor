@@ -39,6 +39,11 @@ class MenuViewController: UIViewController {
         
         present(controller, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func chooseScissor(_ sender: Any) {
+        
+    }
 
 }
 
