@@ -14,9 +14,21 @@ class ResultViewController: UIViewController {
     var userValue:Int?
     
     //Mark: Outlets
-    @IBOutlet weak var computerChoice: UILabel!
-    @IBOutlet weak var userChoice: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if userValue == 1 {
+            if computerValue == 2 {
+                resultLabel.text = "Computer Choose paper and you Choose Rock, you lost!"
+            } else if computerValue == 3 {
+                resultLabel.text = "Computer choose Scissor and you Choose Rock, you WON!"
+            } else if computerValue == 1  {
+                resultLabel.text = "You both choose rock is a bet !"
+            }
+        }
+    
+    }
     
     
     override func viewDidLoad() {
@@ -30,15 +42,14 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     *    dismiss this view controller
+     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+
+
 
 }

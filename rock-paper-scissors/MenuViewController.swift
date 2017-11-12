@@ -31,7 +31,13 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func chooseRock(_ sender: Any) {
-        print("The user Choose Rock")
+        let controller: ResultViewController
+        controller = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        
+        controller.computerValue = randomChoice()
+        controller.userValue = 1
+        
+        present(controller, animated: true, completion: nil)
     }
 
 }
