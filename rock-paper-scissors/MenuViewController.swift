@@ -30,6 +30,9 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func chooseRock(_ sender: Any) {
+        print("The user Choose Rock")
+    }
 
 }
 

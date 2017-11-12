@@ -33,6 +33,9 @@
                                                 <state key="normal" title="Rock">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="chooseRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ERq-eS-gAp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPH-mf-pIg">
                                                 <rect key="frame" x="114.5" y="0.0" width="114" height="447"/>
