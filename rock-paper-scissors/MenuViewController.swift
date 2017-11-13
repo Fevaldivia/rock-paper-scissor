@@ -43,8 +43,14 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! ResultViewController
         
-        controller.computerValue = randomChoice()
-        controller.userValue = 2
+        if segue.identifier == "chooseScissor" {
+            controller.computerValue = randomChoice()
+            controller.userValue = 2
+        } else if segue.identifier == "choosePaper"{
+            controller.computerValue = randomChoice()
+            controller.userValue = 3
+        }
+       
     }
     
     
@@ -52,6 +58,13 @@ class MenuViewController: UIViewController {
         performSegue(withIdentifier: "chooseScissor", sender: self)
         
     }
+    
+    
+    @IBAction func choosePaper(_ sender: Any) {
+        performSegue(withIdentifier: "choosePaper", sender: self)
+    }
+    
+    
 
 }
 

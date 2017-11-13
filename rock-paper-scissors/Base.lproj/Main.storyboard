@@ -51,6 +51,9 @@
                                                 <state key="normal" title="Paper">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="choosePaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tlp-sH-isB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -77,6 +80,7 @@
                     </view>
                     <connections>
                         <segue destination="7uI-fl-WUA" kind="presentation" identifier="chooseScissor" id="C6z-pG-8nU"/>
+                        <segue destination="7uI-fl-WUA" kind="presentation" identifier="choosePaper" id="R5A-Wu-DBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,4 +127,7 @@
             <point key="canvasLocation" x="900" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R5A-Wu-DBO"/>
+    </inferredMetricsTieBreakers>
 </document>
