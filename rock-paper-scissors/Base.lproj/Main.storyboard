@@ -30,15 +30,30 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNz-QJ-g14">
                                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="447"/>
-                                                <state key="normal" title="Rock"/>
+                                                <state key="normal" title="Rock">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ERq-eS-gAp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPH-mf-pIg">
                                                 <rect key="frame" x="114.5" y="0.0" width="114" height="447"/>
-                                                <state key="normal" title="Scissor"/>
+                                                <state key="normal" title="Scissor">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="chooseScissor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDp-T3-iAR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaJ-Bf-GWS">
                                                 <rect key="frame" x="228.5" y="0.0" width="114.5" height="447"/>
-                                                <state key="normal" title="Paper"/>
+                                                <state key="normal" title="Paper">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="choosePaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tlp-sH-isB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -48,14 +63,14 @@
                                             <constraint firstAttribute="height" constant="200" id="0iy-N2-rXf"/>
                                             <constraint firstAttribute="width" constant="343" id="5c4-6d-Ing"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18802346449999999" green="0.3643429487" blue="0.1334280259" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="BAr-v3-9uA" secondAttribute="trailing" id="Hqi-Rj-D0d"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BAr-v3-9uA" secondAttribute="bottom" id="Vbp-FA-Q9X"/>
@@ -63,9 +78,56 @@
                             <constraint firstItem="BAr-v3-9uA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v2U-Mf-Fq3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="7uI-fl-WUA" kind="presentation" identifier="chooseScissor" id="C6z-pG-8nU"/>
+                        <segue destination="7uI-fl-WUA" kind="presentation" identifier="choosePaper" id="R5A-Wu-DBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="gBF-Ft-1Mb">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="7uI-fl-WUA" customClass="ResultViewController" customModule="rock_paper_scissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vLm-Yc-6PS"/>
+                        <viewControllerLayoutGuide type="bottom" id="4BQ-fS-fUm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dMw-q5-ipq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMf-hg-lqV">
+                                <rect key="frame" x="91" y="228" width="193" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6s-VM-29a">
+                                <rect key="frame" x="137" y="464" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to Menu">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="7uI-fl-WUA" eventType="touchUpInside" id="wDh-gt-lvw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18802346449999999" green="0.3643429487" blue="0.1334280259" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="oMf-hg-lqV" id="X67-sc-9mW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAU-AT-rmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="36.431784107946029"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="R5A-Wu-DBO"/>
+    </inferredMetricsTieBreakers>
 </document>
