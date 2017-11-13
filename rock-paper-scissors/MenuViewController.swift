@@ -40,8 +40,16 @@ class MenuViewController: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! ResultViewController
+        
+        controller.computerValue = randomChoice()
+        controller.userValue = 2
+    }
+    
     
     @IBAction func chooseScissor(_ sender: Any) {
+        performSegue(withIdentifier: "chooseScissor", sender: self)
         
     }
 

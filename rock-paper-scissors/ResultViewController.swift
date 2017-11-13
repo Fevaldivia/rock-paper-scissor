@@ -26,6 +26,14 @@ class ResultViewController: UIViewController {
             } else if computerValue == 1  {
                 resultLabel.text = "You both choose rock is a bet !"
             }
+        } else if userValue == 2 {
+            if computerValue == 1 {
+                resultLabel.text = "Computer choose Rock and you choose scissor, you lost"
+            } else if computerValue == 2 {
+                resultLabel.text = "Computer Choose scissor and you choose scissor is a bet!"
+            } else if computerValue == 3 {
+                resultLabel.text = "Computer choose Paper and you choose Scissor you Won ! :)"
+            }
         }
     
     }

@@ -75,6 +75,9 @@
                             <constraint firstItem="BAr-v3-9uA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="v2U-Mf-Fq3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="7uI-fl-WUA" kind="presentation" identifier="chooseScissor" id="C6z-pG-8nU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
